@@ -1,13 +1,17 @@
-import Quadrado  from "@/componentes/Quadrado";
+import {Quadrado} from'@/componentes/Quadrado'
+import {Circulo} from "@/componentes/Circulo";
+import {Pessoa} from "@/componentes/Pessoa";
 
 
 const Page =()=>{
     return (
-        <div>
-            <h1 className="text-lg text-amber-100">Pablo Farias</h1>
+        <>
+            <h1 className=" text-lg text-indigo-500">Pablo Farias</h1>
             <span>Amo minha familia</span>
             <Quadrado/>
-        </div>
+            <Circulo/>
+            <Pessoa/>
+        </>
     )
 }
 

@@ -1,8 +1,11 @@
-const Quadrado = () => {
+
+
+
+
+export const Quadrado = () => {
     return (
-        <div className="w-52 h-52 bg-amber-700 text-slate-100">
+        <div className="w-48  h-32 bg-slate-50 text-indigo-500">
             Texto do componente quadrado
         </div>
     );
 }
-export default Quadrado;

@@ -1,11 +1,15 @@
-import {getImgProps} from "next/dist/shared/lib/get-img-props";
+type Props={
+    name:string;
+    idade:string;
+}
 
-export const Pessoa =()=>{
+export const Pessoa =({name, idade}: Props)=>{
+
     return(
-        <>
-            <h1>Pablo Farias</h1>
-            <img src="/public/next.svg"/>
-        </>
+        <div className="p-3">
+            <h1>{name}</h1>
+            <h2>{idade}</h2>
+        </div>
 
     );
 }

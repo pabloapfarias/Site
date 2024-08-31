@@ -1,0 +1,52 @@
+body {
+    background-color: #0a0a0a;
+    background-image: radial-gradient(circle at 20% 20%, rgba(50, 50, 50, 0.1), transparent),
+    radial-gradient(circle at 80% 30%, rgba(50, 50, 50, 0.15), transparent),
+    radial-gradient(circle at 50% 50%, rgba(50, 50, 50, 0.05), transparent),
+    radial-gradient(circle at 90% 70%, rgba(50, 50, 50, 0.08), transparent),
+    radial-gradient(circle at 10% 80%, rgba(50, 50, 50, 0.12), transparent);
+    background-size: 200% 200%;
+    background-blend-mode: screen;
+}
+
+.neural-network {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.neural-network::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.8) 0, rgba(255, 255, 255, 0.8) 1px, transparent 1px, transparent 50px),
+    repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.8) 0, rgba(255, 255, 255, 0.8) 1px, transparent 1px, transparent 50px);
+    background-blend-mode: overlay;
+    opacity: 0.7;
+    z-index: 1;
+    animation: backgroundMove 5s linear infinite;
+}
+
+@keyframes backgroundMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-200px, -200px); }
+}
+
+.node {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    animation: nodeMove 4s ease-in-out infinite alternate;
+}
+
+@keyframes nodeMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
